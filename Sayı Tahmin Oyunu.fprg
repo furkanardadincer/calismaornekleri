@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="90539"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2019-10-09 06:01:04 &#214;S"/>
+        <attribute name="created" value="OTA1Mzk7TEFQVE9QLUpHQjFRNjIyOzIwMTktMTAtMDk7MDU6Mzg6MDggw5ZTOzI3MDA="/>
+        <attribute name="edited" value="OTA1Mzk7TEFQVE9QLUpHQjFRNjIyOzIwMTktMTAtMDk7MDY6MDE6MDQgw5ZTOzE7Mjc5NQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="tahmin, sayac, rastgele" type="Integer" array="False" size=""/>
+            <assign variable="sayac" expression="0"/>
+            <assign variable="tahmin" expression="0"/>
+            <assign variable="rastgele" expression="Random(100)"/>
+            <output expression="&quot;Tahmin giriniz&quot;" newline="True"/>
+            <do expression="Tahmin!=rastgele">
+                <input variable="Tahmin"/>
+                <if expression="Tahmin!=rastgele">
+                    <then>
+                        <if expression="Tahmin&gt;rastgele">
+                            <then>
+                                <output expression="&quot;Daha k&#252;&#231;&#252;k de&#287;er giriniz&quot;" newline="True"/>
+                            </then>
+                            <else>
+                                <output expression="&quot;Daha b&#252;y&#252;k de&#287;er giriniz&quot;" newline="True"/>
+                            </else>
+                        </if>
+                    </then>
+                    <else/>
+                </if>
+                <assign variable="sayac" expression="sayac+1"/>
+            </do>
+            <output expression="rastgele&amp;&quot; say&#305;s&#305;n&#305; &quot;&amp;sayac&amp;&quot; seferde buldunuz!&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

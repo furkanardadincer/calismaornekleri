@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.6">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="33"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2019-10-09 11:44:03 "/>
+        <attribute name="created" value="MzM7IFBDMzM7IDIwMTktMTAtMDk7IDExOjAyOjI5IDsgMTU3MQ=="/>
+        <attribute name="edited" value="MzM7IFBDMzM7IDIwMTktMTAtMDk7IDExOjQ0OjAzIDsgMTU2OQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="tahmin" type="Integer" array="False" size=""/>
+            <declare name="sayac, rastgele" type="Integer" array="False" size=""/>
+            <assign variable="sayac" expression="0"/>
+            <assign variable="tahmin" expression="0"/>
+            <assign variable="rastgele" expression="Random(100)"/>
+            <output expression="rastgele"/>
+            <output expression="&quot;tahmin giriniz&quot;"/>
+            <do expression="tahmin!=rastgele">
+                <input variable="Tahmin"/>
+                <if expression="tahmin!=rastgele">
+                    <then>
+                        <if expression="tahmin&gt;rastgele">
+                            <then>
+                                <output expression="&quot;Daha kucuk tahmin girin&quot;"/>
+                            </then>
+                            <else>
+                                <output expression="&quot;Daha buyuk tahmin girin&quot;"/>
+                            </else>
+                        </if>
+                    </then>
+                    <else/>
+                </if>
+                <assign variable="sayac" expression="sayac+1"/>
+            </do>
+            <output expression="rastgele&amp;&quot; say&#305;s&#305;n&#305; &quot;&amp;sayac&amp;&quot; seferde buldunuz!&quot;"/>
+        </body>
+    </function>
+</flowgorithm>
